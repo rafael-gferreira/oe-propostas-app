@@ -2,11 +2,8 @@
 <html>
 <head>
   <!--
-    A URL de um Artifact publicado não é previsível em tempo de build, por
-    isso a base é calculada em runtime a partir do URL atual, em vez de um
-    <base href> fixo — garante que os caminhos relativos (main.dart.js,
-    canvaskit/, etc.) resolvem corretamente seja qual for o caminho onde
-    esta página acabe por ser servida.
+    A URL onde isto acaba por ser servido não é previsível em tempo de
+    build, por isso a base é calculada em runtime a partir do URL atual.
   -->
   <script>
     document.write('<base href="' + location.pathname.replace(/[^/]*$/, '') + '">');

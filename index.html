@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    A URL de um Artifact publicado não é previsível em tempo de build, por
+    isso a base é calculada em runtime a partir do URL atual, em vez de um
+    <base href> fixo — garante que os caminhos relativos (main.dart.js,
+    canvaskit/, etc.) resolvem corretamente seja qual for o caminho onde
+    esta página acabe por ser servida.
+  -->
+  <script>
+    document.write('<base href="' + location.pathname.replace(/[^/]*$/, '') + '">');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Revisão e votação de propostas de alteração ao Orçamento do Estado, por assessores e deputados.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1B4965">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="oe_propostas">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Propostas OE</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <!--
+    You can customize the "flutter_bootstrap.js" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
+
+    For more details:
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
